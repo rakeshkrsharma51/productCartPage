@@ -1,0 +1,149 @@
+.header {
+    padding: 10px;
+}
+
+.cart { 
+    font-size: 13px;
+}
+
+.home {
+    @extend .cart;
+    color: #00bcd4;
+}
+
+.icon {
+    @extend .cart;
+    padding: 0 3px;
+    position: sticky;
+    top: 15px;
+}
+
+.left-div {
+    width: 80%;
+    float: left;
+
+    .cart-header {
+        font-size: 12px;
+        font-weight: 600;
+        padding: 0 10px;
+    }
+
+    .table {
+       // display: flex;
+        width: 98%; 
+        margin: 10px; 
+        // padding: 5px; 
+        font-size: 12px;
+    }
+
+    .table-header {
+        @extend .table;  
+        display: flex;
+        padding: 5px 2px;
+        border-top: 2px solid #ece3e3; 
+        border-bottom: 2px solid #ece3e3;
+    }
+
+    .table-row {
+        @extend .table;
+        border: 2px solid #ece3e3;
+
+        .desc {
+            width:40%; 
+            display: flex; 
+            margin: 5px;
+
+            .font-color {
+                color: #00bcd4;
+            }
+
+            .text {
+                display: flex; 
+                margin: 5px;
+
+                .font-design {
+                    padding: 2px 5px; 
+                    font-size: 11px;
+                }
+            }
+        }
+
+        .cell {
+            width:15%; 
+            line-height: 100px;
+        }
+
+        .cell-button {
+            display: flex;  
+            @extend .cell;
+            @media only screen and (max-width: 880px) {
+                width: 15%;
+                padding: 15px 0 0 5px;
+                display: block;
+                line-height: 0%;
+            }
+        }
+
+        .cell-button button {
+            cursor: pointer;
+        }
+
+        .options {
+            border-top: 2px solid #ece3e3; 
+            display: flex; 
+            padding: 10px; 
+            background-color: #e4e1e1;
+        }
+
+        .options select {
+            @media only screen and (max-width: 880px) {
+                width: 150px;
+            }
+        }
+    }
+
+}
+
+.right-div {
+    width: 20%;
+
+    .box {
+        width: 200px;
+        border: 2px solid #ece3e3;
+        margin: 0 10px;
+        padding: 15px 7px;
+
+        .order-summary-text {
+            font-size: 10px;
+            font-weight: 600;
+        }
+
+        .order {
+            font-size: 11px;
+
+            .bill {
+                float: right;
+            }
+        }
+
+        .tax-text {
+            font-size: 10px;
+            font-weight: 500;
+
+            .star {
+                color: red;
+            }
+        }
+
+        .checkout {
+            text-align: center;
+            padding: 10px 0;
+
+            .btn {
+                background-color: #d23c3c;
+                color: #ffffff;
+            }
+        }
+        
+    }
+}
